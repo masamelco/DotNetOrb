@@ -62,14 +62,6 @@ namespace DotNetOrb.Core.IIOP
                         address = ipAddress;
                         hostName = value;
                     }
-                    try
-                    {
-                        host = Dns.GetHostEntry(value);
-                    }
-                    catch (SocketException)
-                    {
-                        //throw new CORBA.Internal("Unable to resolve host " + value);
-                    }
                 }
                 catch (FormatException)
                 {
